@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Asisten Manual - Bantuan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bantuan.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <nav class="sidebar">
+            <!-- ... -->
+        </nav>
+
+        <main class="main-content">
+            <header class="content-header">
+                <h1>❓ Pusat Bantuan</h1>
+                <div class="search-help">
+                    <input type="text" placeholder="Cari bantuan...">
+                    <button>🔍</button>
+                </div>
+            </header>
+
+            <!-- Quick Help -->
+            <div class="help-grid">
+                <div class="help-card" onclick="showGuide('getting-started')">
+                    <div class="help-icon">🚀</div>
+                    <h3>Memulai</h3>
+                    <p>Cara menggunakan AI Asisten untuk pemula</p>
+                </div>
+                <div class="help-card" onclick="showGuide('features')">
+                    <div class="help-icon">✨</div>
+                    <h3>Fitur Lengkap</h3>
+                    <p>Jelajahi semua kemampuan AI Asisten</p>
+                </div>
+                <div class="help-card" onclick="showGuide('shortcuts')">
+                    <div class="help-icon">⌨️</div>
+                    <h3>Shortcut & Tips</h3>
+                    <p>Tips cepat dan pintasan keyboard</p>
+                </div>
+                <div class="help-card" onclick="showGuide('faq')">
+                    <div class="help-icon">❓</div>
+                    <h3>FAQ</h3>
+                    <p>Pertanyaan yang sering diajukan</p>
+                </div>
+            </div>
+
+            <!-- Panduan Lengkap -->
+            <div class="guides-section">
+                <h2>📖 Panduan Penggunaan</h2>
+
+                <div class="guide-item" onclick="toggleGuide(1)">
+                    <div class="guide-question">
+                        <span>Bagaimana cara memulai chat?</span>
+                        <span class="toggle">▼</span>
+                    </div>
+                    <div class="guide-answer" id="guide1">
+                        <p>1. Ketik pertanyaan di kolom chat</p>
+                        <p>2. Tekan Enter atau klik tombol Kirim</p>
+                        <p>3. AI akan merespon dengan jawaban dari database manual</p>
+                        <p>4. Anda juga bisa klik saran pertanyaan yang tersedia</p>
+                    </div>
+                </div>
+
+                <div class="guide-item" onclick="toggleGuide(2)">
+                    <div class="guide-question">
+                        <span>Apakah bisa pakai singkatan?</span>
+                        <span class="toggle">▼</span>
+                    </div>
+                    <div class="guide-answer" id="guide2">
+                        <p><strong>BISA!</strong> AI akan mendeteksi singkatan umum:</p>
+                        <ul>
+                            <li>hlo, hi → halo/hai</li>
+                            <li>mksh, thx → terima kasih</li>
+                            <li>maaf, mf → maaf</li>
+                            <li>iya, y, ya → iya</li>
+                            <li>ga, gk, tdk → tidak</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="guide-item" onclick="toggleGuide(3)">
+                    <div class="guide-question">
+                        <span>Apakah butuh API key / internet?</span>
+                        <span class="toggle">▼</span>
+                    </div>
+                    <div class="guide-answer" id="guide3">
+                        <p><strong class="highlight">TIDAK PERLU!</strong> AI ini 100% offline:</p>
+                        <p>✅ Tidak perlu API key</p>
+                        <p>✅ Tidak perlu koneksi internet</p>
+                        <p>✅ Semua respons ditulis manual</p>
+                        <p>✅ Aman & privasi terjaga</p>
+                    </div>
+                </div>
+
+                <div class="guide-item" onclick="toggleGuide(4)">
+                    <div class="guide-question">
+                        <span>Berapa banyak respons yang tersedia?</span>
+                        <span class="toggle">▼</span>
+                    </div>
+                    <div class="guide-answer" id="guide4">
+                        <p>Saat ini tersedia <strong>2,047 respons</strong> dalam 48 kategori:</p>
+                        <p>📚 Pendidikan: 203 respons</p>
+                        <p>💻 Teknologi: 156 respons</p>
+                        <p>🏥 Kesehatan: 145 respons</p>
+                        <p>➕ Matematika: 134 respons</p>
+                        <p>🍜 Makanan: 112 respons</p>
+                        <p>Dan masih banyak lagi!</p>
+                    </div>
+                </div>
+
+                <div class="guide-item" onclick="toggleGuide(5)">
+                    <div class="guide-question">
+                        <span>Bagaimana cara menambah respons?</span>
+                        <span class="toggle">▼</span>
+                    </div>
+                    <div class="guide-answer" id="guide5">
+                        <p>Anda bisa menambah respons dengan:</p>
+                        <p>1. Buka file <code>js/responses-2000.js</code></p>
+                        <p>2. Tambahkan di kategori yang sesuai:</p>
+                        <pre>
+{
+    keywords: ["pertanyaan", "versi singkat"],
+    response: "Jawaban yang diinginkan"
+}
+                        </pre>
+                        <p>3. Simpan file dan refresh browser</p>
+                    </div>
+                </div>
+
+                <div class="guide-item" onclick="toggleGuide(6)">
+                    <div class="guide-question">
+                        <span>Fitur apa saja yang tersedia?</span>
+                        <span class="toggle">▼</span>
+                    </div>
+                    <div class="guide-answer" id="guide6">
+                        <p>✨ Fitur lengkap:</p>
+                        <ul>
+                            <li>Chat real-time dengan 2000+ respons</li>
+                            <li>Deteksi singkatan & variasi kata</li>
+                            <li>48 kategori berbeda</li>
+                            <li>Statistik penggunaan</li>
+                            <li>Export chat ke file</li>
+                            <li>Reset percakapan</li>
+                            <li>Dark/light theme</li>
+                            <li>100% offline tanpa API key</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kontak & Dukungan -->
+            <div class="support-section">
+                <h2>📞 Butuh Bantuan Lebih?</h2>
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h4>Email</h4>
+                        <p>bantuan@aiasisten.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">💬</div>
+                        <h4>Live Chat</h4>
+                        <p>Senin-Jumat, 08:00-17:00</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📱</div>
+                        <h4>WhatsApp</h4>
+                        <p>+62 812 3456 7890</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feedback -->
+            <div class="feedback-section">
+                <h3>📝 Berikan Masukan</h3>
+                <textarea placeholder="Ceritakan pengalaman Anda menggunakan AI Asisten..."></textarea>
+                <button class="btn-send-feedback">Kirim Masukan</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/bantuan.js"></script>
+</body>
+</html>
