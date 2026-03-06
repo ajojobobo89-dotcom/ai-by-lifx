@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Asisten Manual - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo-area">
+                <div class="logo">🧠 AI<span>Manual</span></div>
+                <div class="badge-free">GRATIS</div>
+            </div>
+            
+            <div class="menu-items">
+                <a href="index.html" class="menu-item active">
+                    <span class="icon">📊</span>
+                    <span class="text">Dashboard</span>
+                </a>
+                <a href="kategori.html" class="menu-item">
+                    <span class="icon">📚</span>
+                    <span class="text">Kategori</span>
+                    <span class="count">48</span>
+                </a>
+                <a href="statistik.html" class="menu-item">
+                    <span class="icon">📈</span>
+                    <span class="text">Statistik</span>
+                </a>
+                <a href="pengaturan.html" class="menu-item">
+                    <span class="icon">⚙️</span>
+                    <span class="text">Pengaturan</span>
+                </a>
+                <a href="bantuan.html" class="menu-item">
+                    <span class="icon">❓</span>
+                    <span class="text">Bantuan</span>
+                </a>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">👤</div>
+                    <div class="user-detail">
+                        <div class="user-name">Tam Lokal</div>
+                        <div class="user-status">Offline Mode</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="content-header">
+                <h1>Dashboard AI Asisten</h1>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Cepat cari pertanyaan...">
+                        <button>🔍</button>
+                    </div>
+                    <div class="notification">🔔</div>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📝</div>
+                    <div class="stat-info">
+                        <div class="stat-value">2,047</div>
+                        <div class="stat-label">Total Respons</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📂</div>
+                    <div class="stat-info">
+                        <div class="stat-value">48</div>
+                        <div class="stat-label">Kategori</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💬</div>
+                    <div class="stat-info">
+                        <div class="stat-value">1,284</div>
+                        <div class="stat-label">Percakapan</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-info">
+                        <div class="stat-value">98%</div>
+                        <div class="stat-label">Akurasi</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Chat Interface -->
+            <div class="chat-interface">
+                <div class="chat-header">
+                    <div class="chat-title">
+                        <h2>Asisten AI Manual</h2>
+                        <span class="status-badge online">Online (Lokal)</span>
+                    </div>
+                    <div class="chat-actions">
+                        <button class="btn-icon" onclick="resetChat()">↺</button>
+                        <button class="btn-icon" onclick="exportChat()">📥</button>
+                        <button class="btn-icon" onclick="clearChat()">🗑️</button>
+                    </div>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will appear here -->
+                </div>
+
+                <div class="chat-input-area">
+                    <div class="typing-indicator" id="typingIndicator"></div>
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="userInput" 
+                            placeholder="Ketik pertanyaan... (contoh: halo, hlo, hai)"
+                            autocomplete="off"
+                        >
+                        <button onclick="sendMessage()" class="send-btn">
+                            <span>Kirim</span>
+                            <span class="shortcut">↵</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Quick Suggestions -->
+                    <div class="suggestion-chips" id="suggestionChips">
+                        <span class="chip" onclick="quickQuestion('halo')">👋 Halo</span>
+                        <span class="chip" onclick="quickQuestion('apa itu ai')">🤖 Apa itu AI?</span>
+                        <span class="chip" onclick="quickQuestion('cara sehat')">💪 Cara sehat</span>
+                        <span class="chip" onclick="quickQuestion('motivasi')">🔥 Motivasi</span>
+                        <span class="chip" onclick="quickQuestion('makanan')">🍜 Makanan</span>
+                        <span class="chip" onclick="quickQuestion('teknologi')">💻 Teknologi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Access Categories -->
+            <div class="quick-categories">
+                <h3>Kategori Populer</h3>
+                <div class="category-grid">
+                    <div class="category-card" onclick="window.location.href='kategori.html?cat=teknologi'">
+                        <div class="cat-icon">💻</div>
+                        <div class="cat-name">Teknologi</div>
+                        <div class="cat-count">156</div>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='kategori.html?cat=pendidikan'">
+                        <div class="cat-icon">📚</div>
+                        <div class="cat-name">Pendidikan</div>
+                        <div class="cat-count">203</div>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='kategori.html?cat=kesehatan'">
+                        <div class="cat-icon">🏥</div>
+                        <div class="cat-name">Kesehatan</div>
+                        <div class="cat-count">145</div>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='kategori.html?cat=motivasi'">
+                        <div class="cat-icon">🔥</div>
+                        <div class="cat-name">Motivasi</div>
+                        <div class="cat-count">98</div>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='kategori.html?cat=makanan'">
+                        <div class="cat-icon">🍜</div>
+                        <div class="cat-name">Makanan</div>
+                        <div class="cat-count">112</div>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='kategori.html?cat=hewan'">
+                        <div class="cat-icon">🐾</div>
+                        <div class="cat-name">Hewan</div>
+                        <div class="cat-count">87</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/responses-2000.js"></script>
+    <script src="js/search-engine.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
