@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Asisten Manual - Statistik</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/statistik.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- Sidebar Navigation (sama) -->
+        <nav class="sidebar">
+            <!-- ... -->
+        </nav>
+
+        <main class="main-content">
+            <header class="content-header">
+                <h1>📊 Statistik & Analitik</h1>
+                <div class="date-range">
+                    <select id="timeRange">
+                        <option>Hari Ini</option>
+                        <option>Minggu Ini</option>
+                        <option>Bulan Ini</option>
+                        <option selected>Semua Waktu</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- Statistik Utama -->
+            <div class="stats-overview">
+                <div class="stat-card main">
+                    <div class="stat-icon">💬</div>
+                    <div class="stat-detail">
+                        <span class="stat-label">Total Percakapan</span>
+                        <span class="stat-value">1,284</span>
+                        <span class="stat-change positive">↑ 12%</span>
+                    </div>
+                </div>
+                <div class="stat-card main">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-detail">
+                        <span class="stat-label">Pengguna Aktif</span>
+                        <span class="stat-value">342</span>
+                        <span class="stat-change positive">↑ 8%</span>
+                    </div>
+                </div>
+                <div class="stat-card main">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-detail">
+                        <span class="stat-label">Rata-rata Respon</span>
+                        <span class="stat-value">0.3 detik</span>
+                        <span class="stat-change positive">↑ 5%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grafik -->
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>Percakapan per Hari</h3>
+                    <div class="chart-container" id="dailyChart">
+                        <!-- Bar chart simulation -->
+                        <div class="bar" style="height: 30%">Sen</div>
+                        <div class="bar" style="height: 45%">Sel</div>
+                        <div class="bar" style="height: 25%">Rab</div>
+                        <div class="bar" style="height: 60%">Kam</div>
+                        <div class="bar" style="height: 80%">Jum</div>
+                        <div class="bar" style="height: 50%">Sab</div>
+                        <div class="bar" style="height: 40%">Min</div>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Top Kategori</h3>
+                    <div class="pie-chart">
+                        <div class="pie-segment" style="--percentage: 25; --color: #4f46e5;">Teknologi 25%</div>
+                        <div class="pie-segment" style="--percentage: 20; --color: #10b981;">Pendidikan 20%</div>
+                        <div class="pie-segment" style="--percentage: 15; --color: #f59e0b;">Kesehatan 15%</div>
+                        <div class="pie-segment" style="--percentage: 12; --color: #ef4444;">Motivasi 12%</div>
+                        <div class="pie-segment" style="--percentage: 10; --color: #8b5cf6;">Makanan 10%</div>
+                        <div class="pie-segment" style="--percentage: 18; --color: #6b7280;">Lainnya 18%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabel Top Pertanyaan -->
+            <div class="top-questions">
+                <h3>🔥 Pertanyaan Terpopuler</h3>
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Pertanyaan</th>
+                            <th>Kategori</th>
+                            <th>Frekuensi</th>
+                            <th>Trend</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Apa itu AI?</td>
+                            <td>Teknologi</td>
+                            <td>234x</td>
+                            <td><span class="trend up">↑ 23%</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Cara belajar efektif</td>
+                            <td>Pendidikan</td>
+                            <td>187x</td>
+                            <td><span class="trend up">↑ 15%</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Motivasi sukses</td>
+                            <td>Motivasi</td>
+                            <td>156x</td>
+                            <td><span class="trend up">↑ 8%</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Cara hidup sehat</td>
+                            <td>Kesehatan</td>
+                            <td>143x</td>
+                            <td><span class="trend down">↓ 2%</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Resep nasi goreng</td>
+                            <td>Makanan</td>
+                            <td>132x</td>
+                            <td><span class="trend up">↑ 5%</span></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Bahasa Inggris dasar</td>
+                            <td>Bahasa</td>
+                            <td>98x</td>
+                            <td><span class="trend up">↑ 12%</span></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Rumus matematika</td>
+                            <td>Matematika</td>
+                            <td>87x</td>
+                            <td><span class="trend">→ 0%</span></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Hewan peliharaan</td>
+                            <td>Hewan</td>
+                            <td>76x</td>
+                            <td><span class="trend up">↑ 3%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Statistik Lanjutan -->
+            <div class="advanced-stats">
+                <div class="stat-box">
+                    <h4>Waktu Aktif Pengguna</h4>
+                    <div class="time-heatmap">
+                        <div class="hour-row">
+                            <span>00-06</span>
+                            <div class="heat-bar" style="width: 20%"></div>
+                            <span>20%</span>
+                        </div>
+                        <div class="hour-row">
+                            <span>06-12</span>
+                            <div class="heat-bar" style="width: 60%"></div>
+                            <span>60%</span>
+                        </div>
+                        <div class="hour-row">
+                            <span>12-18</span>
+                            <div class="heat-bar" style="width: 80%"></div>
+                            <span>80%</span>
+                        </div>
+                        <div class="hour-row">
+                            <span>18-24</span>
+                            <div class="heat-bar" style="width: 45%"></div>
+                            <span>45%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <h4>Performa Respons</h4>
+                    <div class="performance-metrics">
+                        <div class="metric">
+                            <span>Akurasi</span>
+                            <span class="value">98%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 98%"></div>
+                        </div>
+                        
+                        <div class="metric">
+                            <span>Kepuasan</span>
+                            <span class="value">94%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 94%"></div>
+                        </div>
+                        
+                        <div class="metric">
+                            <span>Kecepatan</span>
+                            <span class="value">99%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 99%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/statistik.js"></script>
+</body>
+</html>
