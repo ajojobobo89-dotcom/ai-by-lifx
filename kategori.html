@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Asisten Manual - Kategori</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/kategori.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- Sidebar Navigation (sama seperti index) -->
+        <nav class="sidebar">
+            <!-- ... sidebar content sama ... -->
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>📚 Semua Kategori</h1>
+                <div class="search-category">
+                    <input type="text" placeholder="Cari kategori..." id="searchCategory">
+                    <button onclick="filterCategories()">🔍</button>
+                </div>
+            </header>
+
+            <!-- Category Stats -->
+            <div class="category-stats">
+                <div class="stat-badge">
+                    <span class="big">48</span>
+                    <span>Total Kategori</span>
+                </div>
+                <div class="stat-badge">
+                    <span class="big">2,047</span>
+                    <span>Total Respons</span>
+                </div>
+                <div class="stat-badge">
+                    <span class="big">12</span>
+                    <span>Kategori Baru</span>
+                </div>
+            </div>
+
+            <!-- Categories Grid -->
+            <div class="categories-wrapper">
+                <!-- Kategori Teknologi -->
+                <div class="category-section" data-category="teknologi">
+                    <div class="section-header" onclick="toggleCategory('teknologi')">
+                        <div class="header-left">
+                            <span class="cat-icon">💻</span>
+                            <h2>Teknologi & Digital</h2>
+                            <span class="count">156 respons</span>
+                        </div>
+                        <div class="header-right">
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="section-content" id="content-teknologi">
+                        <div class="preview-list">
+                            <div class="preview-item">
+                                <span class="q">Apa itu AI?</span>
+                                <span class="a">AI adalah simulasi kecerdasan manusia dalam mesin...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Apa itu HTML?</span>
+                                <span class="a">HTML adalah bahasa markup untuk membuat struktur web...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Apa itu JavaScript?</span>
+                                <span class="a">JavaScript adalah bahasa pemrograman untuk web interaktif...</span>
+                            </div>
+                            <button class="btn-view-all" onclick="viewAll('teknologi')">Lihat Semua 156 →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kategori Pendidikan -->
+                <div class="category-section" data-category="pendidikan">
+                    <div class="section-header" onclick="toggleCategory('pendidikan')">
+                        <div class="header-left">
+                            <span class="cat-icon">📚</span>
+                            <h2>Pendidikan & Akademik</h2>
+                            <span class="count">203 respons</span>
+                        </div>
+                        <div class="header-right">
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="section-content" id="content-pendidikan">
+                        <div class="preview-list">
+                            <div class="preview-item">
+                                <span class="q">Cara belajar efektif?</span>
+                                <span class="a">Belajar efektif: buat jadwal, pilih tempat nyaman, gunakan teknik pomodoro...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Tips menghafal cepat?</span>
+                                <span class="a">Gunakan metode mind mapping, buat singkatan, ulangi secara berkala...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Cara mengatasi malas belajar?</span>
+                                <span class="a">Mulai dari hal kecil, buat target harian, reward diri sendiri...</span>
+                            </div>
+                            <button class="btn-view-all" onclick="viewAll('pendidikan')">Lihat Semua 203 →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kategori Kesehatan -->
+                <div class="category-section" data-category="kesehatan">
+                    <div class="section-header" onclick="toggleCategory('kesehatan')">
+                        <div class="header-left">
+                            <span class="cat-icon">🏥</span>
+                            <h2>Kesehatan & Medis</h2>
+                            <span class="count">145 respons</span>
+                        </div>
+                        <div class="header-right">
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="section-content" id="content-kesehatan">
+                        <div class="preview-list">
+                            <div class="preview-item">
+                                <span class="q">Cara hidup sehat?</span>
+                                <span class="a">Makan bergizi, olahraga teratur, istirahat cukup, kelola stres...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Manfaat olahraga?</span>
+                                <span class="a">Menjaga jantung, mengontrol berat badan, meningkatkan mood...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Berapa jam tidur ideal?</span>
+                                <span class="a">7-9 jam per hari untuk dewasa...</span>
+                            </div>
+                            <button class="btn-view-all" onclick="viewAll('kesehatan')">Lihat Semua 145 →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kategori Motivasi -->
+                <div class="category-section" data-category="motivasi">
+                    <div class="section-header" onclick="toggleCategory('motivasi')">
+                        <div class="header-left">
+                            <span class="cat-icon">🔥</span>
+                            <h2>Motivasi & Pengembangan Diri</h2>
+                            <span class="count">98 respons</span>
+                        </div>
+                        <div class="header-right">
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="section-content" id="content-motivasi">
+                        <div class="preview-list">
+                            <div class="preview-item">
+                                <span class="q">Kata-kata motivasi?</span>
+                                <span class="a">Setiap hari adalah kesempatan baru untuk menjadi lebih baik...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Cara mengatasi rasa malas?</span>
+                                <span class="a">Mulai dari langkah kecil, buat target realistis, cari teman support...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Tips sukses?</span>
+                                <span class="a">Konsisten, belajar terus, jaringan luas, dan berani gagal...</span>
+                            </div>
+                            <button class="btn-view-all" onclick="viewAll('motivasi')">Lihat Semua 98 →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kategori Makanan -->
+                <div class="category-section" data-category="makanan">
+                    <div class="section-header" onclick="toggleCategory('makanan')">
+                        <div class="header-left">
+                            <span class="cat-icon">🍜</span>
+                            <h2>Makanan & Kuliner</h2>
+                            <span class="count">112 respons</span>
+                        </div>
+                        <div class="header-right">
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="section-content" id="content-makanan">
+                        <div class="preview-list">
+                            <div class="preview-item">
+                                <span class="q">Resep nasi goreng?</span>
+                                <span class="a">Tumis bumbu, masukkan nasi, tambahkan kecap, aduk rata...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Makanan khas Indonesia?</span>
+                                <span class="a">Rendang, sate, gado-gado, nasi goreng, soto...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Makanan sehat?</span>
+                                <span class="a">Sayur, buah, protein tanpa lemak, biji-bijian...</span>
+                            </div>
+                            <button class="btn-view-all" onclick="viewAll('makanan')">Lihat Semua 112 →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kategori Hewan -->
+                <div class="category-section" data-category="hewan">
+                    <div class="section-header" onclick="toggleCategory('hewan')">
+                        <div class="header-left">
+                            <span class="cat-icon">🐾</span>
+                            <h2>Hewan & Satwa</h2>
+                            <span class="count">87 respons</span>
+                        </div>
+                        <div class="header-right">
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="section-content" id="content-hewan">
+                        <div class="preview-list">
+                            <div class="preview-item">
+                                <span class="q">Cara merawat kucing?</span>
+                                <span class="a">Beri makan teratur, vaksinasi, kebersihan kandang, kasih sayang...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Hewan tercepat?</span>
+                                <span class="a">Cheetah, bisa lari 120 km/jam...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Hewan terbesar?</span>
+                                <span class="a">Paus biru, panjang 30 meter, berat 200 ton...</span>
+                            </div>
+                            <button class="btn-view-all" onclick="viewAll('hewan')">Lihat Semua 87 →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kategori Wisata -->
+                <div class="category-section" data-category="wisata">
+                    <div class="section-header" onclick="toggleCategory('wisata')">
+                        <div class="header-left">
+                            <span class="cat-icon">🏖️</span>
+                            <h2>Wisata & Travel</h2>
+                            <span class="count">76 respons</span>
+                        </div>
+                        <div class="header-right">
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="section-content" id="content-wisata">
+                        <div class="preview-list">
+                            <div class="preview-item">
+                                <span class="q">Tempat wisata Bali?</span>
+                                <span class="a">Kuta, Ubud, Tanah Lot, GWK, Pandawa...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Tips traveling hemat?</span>
+                                <span class="a">Booking early, cari promo, bawa bekal, pilih transport umum...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Destinasi favorit?</span>
+                                <span class="a">Bali, Jogja, Lombok, Raja Ampat, Labuan Bajo...</span>
+                            </div>
+                            <button class="btn-view-all" onclick="viewAll('wisata')">Lihat Semua 76 →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kategori Matematika -->
+                <div class="category-section" data-category="matematika">
+                    <div class="section-header" onclick="toggleCategory('matematika')">
+                        <div class="header-left">
+                            <span class="cat-icon">➕</span>
+                            <h2>Matematika</h2>
+                            <span class="count">134 respons</span>
+                        </div>
+                        <div class="header-right">
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="section-content" id="content-matematika">
+                        <div class="preview-list">
+                            <div class="preview-item">
+                                <span class="q">Rumus luas lingkaran?</span>
+                                <span class="a">π × r² (pi kali jari-jari kuadrat)...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Apa itu bilangan prima?</span>
+                                <span class="a">Bilangan yang hanya bisa dibagi 1 dan dirinya sendiri: 2,3,5,7,11...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Cara hitung cepat?</span>
+                                <span class="a">Gunakan teknik komutatif, asosiatif, dan distributif...</span>
+                            </div>
+                            <button class="btn-view-all" onclick="viewAll('matematika')">Lihat Semua 134 →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kategori Fisika -->
+                <div class="category-section" data-category="fisika">
+                    <div class="section-header" onclick="toggleCategory('fisika')">
+                        <div class="header-left">
+                            <span class="cat-icon">⚡</span>
+                            <h2>Fisika</h2>
+                            <span class="count">92 respons</span>
+                        </div>
+                        <div class="header-right">
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="section-content" id="content-fisika">
+                        <div class="preview-list">
+                            <div class="preview-item">
+                                <span class="q">Apa itu gravitasi?</span>
+                                <span class="a">Gaya tarik bumi, nilainya 9.8 m/s²...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Rumus kecepatan?</span>
+                                <span class="a">v = s/t (jarak dibagi waktu)...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Hukum Newton?</span>
+                                <span class="a">1. Kelembaman, 2. F=ma, 3. Aksi-reaksi...</span>
+                            </div>
+                            <button class="btn-view-all" onclick="viewAll('fisika')">Lihat Semua 92 →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kategori Kimia -->
+                <div class="category-section" data-category="kimia">
+                    <div class="section-header" onclick="toggleCategory('kimia')">
+                        <div class="header-left">
+                            <span class="cat-icon">🧪</span>
+                            <h2>Kimia</h2>
+                            <span class="count">88 respons</span>
+                        </div>
+                        <div class="header-right">
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="section-content" id="content-kimia">
+                        <div class="preview-list">
+                            <div class="preview-item">
+                                <span class="q">Apa itu atom?</span>
+                                <span class="a">Partikel terkecil penyusun materi...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Rumus air?</span>
+                                <span class="a">H2O (hidrogen + oksigen)...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Perbedaan asam basa?</span>
+                                <span class="a">Asam pH <7, basa pH >7...</span>
+                            </div>
+                            <button class="btn-view-all" onclick="viewAll('kimia')">Lihat Semua 88 →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kategori Biologi -->
+                <div class="category-section" data-category="biologi">
+                    <div class="section-header" onclick="toggleCategory('biologi')">
+                        <div class="header-left">
+                            <span class="cat-icon">🧬</span>
+                            <h2>Biologi</h2>
+                            <span class="count">95 respons</span>
+                        </div>
+                        <div class="header-right">
+                            <span class="expand-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="section-content" id="content-biologi">
+                        <div class="preview-list">
+                            <div class="preview-item">
+                                <span class="q">Apa itu sel?</span>
+                                <span class="a">Unit terkecil kehidupan...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Sistem pencernaan?</span>
+                                <span class="a">Mulut → kerongkongan → lambung → usus → anus...</span>
+                            </div>
+                            <div class="preview-item">
+                                <span class="q">Fotosintesis?</span>
+                                <span class="a">Proses tumbuhan membuat makanan dengan bantuan cahaya...</span>
+                            </div>
+                            <button class="btn-view-all" onclick="viewAll('biologi')">Lihat Semua 95 →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lanjutkan dengan kategori lainnya... -->
+            </div>
+        </main>
+    </div>
+
+    <script src="js/kategori.js"></script>
+</body>
+</html>
