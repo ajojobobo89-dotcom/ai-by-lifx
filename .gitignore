@@ -1,0 +1,226 @@
+# ============= SYSTEM FILES =============
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.icloud
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============= EDITOR FILES =============
+# VS Code
+.vscode/
+*.code-workspace
+.history/
+.vscode-server/
+
+# Vim
+*.swp
+*.swo
+*~
+*.un~
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Atom
+.atom/
+.atom/packages/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+
+# IntelliJ IDEA / WebStorm
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# ============= DEPENDENCIES =============
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# Bower
+bower_components/
+
+# ============= BUILD OUTPUTS =============
+# Build folders
+dist/
+build/
+out/
+target/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Compiled files
+*.class
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.egg-info/
+
+# ============= ENVIRONMENT FILES =============
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# API keys and secrets (meskipun tidak ada, tetap dijaga)
+*.key
+*.pem
+*.crt
+secrets/
+
+# ============= LOGS & DATABASES =============
+# Logs
+*.log
+logs/
+*.logs
+npm-debug.log*
+
+# Databases
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.rdb
+
+# ============= CACHE FILES =============
+# Cache
+.cache/
+.temp/
+.tmp/
+*.cache
+*.tmp
+*.temp
+
+# ============= TEST COVERAGE =============
+# Test coverage
+coverage/
+.nyc_output/
+*.lcov
+
+# ============= PROJECT SPECIFIC =============
+# Data folder (opsional, jika ingin menyimpan data lokal)
+/data/local/
+/data/temp/
+/assets/uploads/
+*.bak
+*.backup
+
+# ============= VS CODE SETTINGS (opsional) =============
+# Uncomment jika ingin menyimpan settings VS Code di repo
+# !.vscode/settings.json
+# !.vscode/extensions.json
+
+# ============= GITHUB SPECIFIC =============
+# GitHub Pages build folder
+/docs/_site/
+/_site/
+
+# ============= ARCHIVE FILES =============
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.iso
+
+# ============= TEMPORARY FILES =============
+# Editor temp files
+*~
+*.swp
+*.swo
+*.tmp
+*.temp
+
+# ============= OS GENERATED =============
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============= CUSTOM FOR AI ASISTEN =============
+# Data pengguna (jika ada fitur simpan)
+/user-data/
+/chat-history/
+/backups/
+
+# File konfigurasi lokal
+config.local.js
+settings.local.json
+*.local
+
+# File backup chat (jika user download)
+*.txt
+*.json
+*.csv
+
+# ============= IGNORE BUT TRACK TEMPLATE =============
+# File konfigurasi yang memiliki template
+# Tapi track template-nya
+config.example.js
+.env.example
+settings.example.json
+
+# ============= SECURITY =============
+# Jangan commit file yang berisi data sensitif
+*.pem
+*.key
+*.crt
+*.cert
+secrets/
+credentials/
